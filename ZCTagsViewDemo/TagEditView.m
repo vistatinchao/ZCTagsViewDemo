@@ -136,7 +136,7 @@ static NSString *const headerId = @"headerId";
 #pragma mark - 重写传递过来的数据源
 - (void)setTags:(NSArray<TagModel *> *)tags{
     _tags = tags;
-    self.recommondTags = (NSMutableArray *)tags;
+    self.recommondTags = [NSMutableArray arrayWithArray:tags];
     // 可以不用刷新 默认colection/view第一次会刷新
     //[self.collectionView reloadData];
 }

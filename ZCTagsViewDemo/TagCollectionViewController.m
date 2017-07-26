@@ -30,7 +30,8 @@
 - (void)addTagView{
     TagCollectionView *tagView = [[TagCollectionView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
     [self.view addSubview:tagView];
-    tagView.tags = (NSMutableArray *)[DataTool tags];
+    tagView.tags = [NSMutableArray arrayWithArray:[DataTool tags]];
+
 }
 
 @end
